@@ -12,8 +12,6 @@
     flex-basis: auto;
     justify-content: end;
     font-family: Comic Sans MS;
-    /* padding: 7px;
-    padding-right: 106px; */
   }
 }
 
@@ -34,7 +32,6 @@
 
 .nav-item {
   font-family: Comic Sans MS;
-  /* margin-left: 30px; */
 }
 
 .custom-card:hover {
@@ -257,8 +254,17 @@ button.btn-search {
   margin-left: 45px;
   font-family: perpetua;
   font-weight: 600;
+}
+.nested-title h3{
+width: 57%;
+display: flex;
+justify-content: center;
+margin-left: 8%;
+font-family: perpetua;
+font-weight: 600;
 
 }
+
 
 .item-cards {
   display: flex;
@@ -281,12 +287,23 @@ button.btn-search {
 }
 .container.item-cards {
   width: 49%;
+  justify-content: space-between;
+}
+.container-fluid.footer-part {
+  background-color: black;
+  color: white;
+  font-family: cursive;
+}
+.footer-main{
+  justify-content: space-around;
+  width: 94%;
 }
 
 
 
 
 
+/*RESPONSIVE PART  */
 @media screen and (max-width:768px) {
   .custom-card {
     width: 100%;
@@ -386,6 +403,10 @@ button.btn-search {
 }
 .part-next h3 {
   margin-left: 0px;
+}
+.footer-main{
+  width: 98%;
+  flex-direction: column;
 }
 
 

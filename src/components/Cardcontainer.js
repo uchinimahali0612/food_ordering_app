@@ -7,9 +7,8 @@ import { IMG_URL } from '../utils/config.js';
 import { RES_URL } from '../utils/config.js';
 import Shimmereffect from './Shimmereffect.js';
 
-
-
 const Cardcontainer = () => {
+//USESTATE
       const [restaurant, setRestaurant] = useState([]);
       const [mstData, setMasterData] = useState([]);
       const [title, setTitle] = useState([]);
@@ -20,6 +19,7 @@ const Cardcontainer = () => {
       const [errorMessage, setErrorMessage] = useState("");
       const [errorSearch, setSearchError] = useState("");
 
+// API CALL STEP
       const getData = async () => {
             try {
                   const data = await fetch(RES_URL);
@@ -30,15 +30,12 @@ const Cardcontainer = () => {
                   setTitle1(json?.data.cards[1]?.card?.card?.header.title);
                   setRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
                   setMasterData(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-
             }
-
             catch (err) {
                   console.log("Error", err);
                   setErrorMessage("There is some error. Please try in a while!")
-                  // setSearchError("No Matches Found :(")
+                  setSearchError("No Matches Found :(")
             }
-
       }
 
       const handleSearchText = (e) => {
@@ -46,7 +43,6 @@ const Cardcontainer = () => {
       }
 
       const handleSearchClick = () => {
-
             const filterData = mstData.filter(resItem => resItem?.info?.name.toLowerCase().includes(searchText.toLowerCase()));
             setRestaurant(filterData);
 
@@ -100,12 +96,10 @@ const Cardcontainer = () => {
             <>
                   <div className='container search-bar'>
                         {
-                         errorMessage ?
-                        <div>{errorSearch}</div> :
-                        <input type="text" value={searchText} placeholder="Search for delicious food" className="search-input" onChange={handleSearchText} />}
+                              errorMessage ?
+                                    <div>{errorSearch}</div> :
+                                    <input type="text" value={searchText} placeholder="Search for delicious food" className="search-input" onChange={handleSearchText} />}
                         <button className='btn-search' onClick={handleSearchClick}><img src="https://www.pngitem.com/pimgs/b/280-2800687_search-icon-transparent-gif-hd-png-download.png" ></img></button>
-
-
                   </div>
 
                   <div className="container pt-4">
@@ -116,7 +110,6 @@ const Cardcontainer = () => {
                                     carousel.map((imgData) => {
                                           return (
                                                 <Carousel img={IMG_URL + imgData?.imageId}
-
                                                 />
                                           )
                                     })
@@ -125,7 +118,6 @@ const Cardcontainer = () => {
                   </div>
 
                   <div className='container '>
-
                         <Title title={title1} />
                         <div className='button-part mt-5'>
                               <button className='btn-rating btn-block btn-outline-dark' style={{ backgroundColor: category === "rating" ? "aliceblue" : "" }} onClick={() => handleFilter('rating')}>Rating 4.3+</button>
@@ -135,7 +127,6 @@ const Cardcontainer = () => {
                               <button className='btn-veg btn-outline-dark' style={{ backgroundColor: category === "highCost" ? "aliceblue" : "" }} onClick={() => handleFilter('highCost')}>Rs.300 - Rs.600</button>
                               {category && <button className='btn-veg btn-outline-dark' onClick={handleReset}>Reset</button>}
                         </div>
-
 
                         <div className='container mt-5 d-flex flex-wrap justify-content-between'>
                               {
@@ -148,8 +139,8 @@ const Cardcontainer = () => {
                                                 restaurant.map((card, index) => {
                                                       return (
                                                             <Restaurantcard
-                                                                  key={index}
-                                                                  {...card?.info}   
+                                                                  key={card?.info}
+                                                                  {...card?.info}
                                                             />
                                                       )
                                                 }) : <Shimmereffect />

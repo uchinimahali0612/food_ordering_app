@@ -6,7 +6,7 @@ const Restaurantcard = ({
     // console.log("props", props);
  return (
  
-        <Link to={`/menu/${id}`} className="custom-card" >
+        <Link to={`/menu/${id}`} className="custom-card" style={{ color: 'black' }}>
             <div className="part-img">
                     <img src={IMG_URL+cloudinaryImageId} />
             </div>

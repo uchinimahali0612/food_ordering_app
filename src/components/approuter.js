@@ -27,7 +27,7 @@ const approuter = createBrowserRouter([
                 element: <Help />
             },
             {
-                path:"menu/:resId123",
+                path:"menu/:resId",
                 element:<Menu/>
 
             }

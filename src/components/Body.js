@@ -9,7 +9,6 @@ const Body = () => {
                 <Search />
                 <Filter />
                 <Cardcontainer />
-
             </>
             );
 }

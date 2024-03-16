@@ -1,12 +1,9 @@
 import { Link } from "react-router-dom";
-
-
-
 const Header = () => {
   return (
     <nav className=" navigation-bar navbar navbar-expand-sm bg-black navbar-dark text-white">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi0H0TAgOMY1hymDf7NPEPU7LcgutcRAf1xA&usqp=CAU"></img>Food Paradise</a>
+        <a className="navbar-brand" href="#">Food Paradise</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
           <span className="navbar-toggler-icon"></span>
         </button>
