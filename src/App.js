@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+// import './my-sass.scss';
 import Header from './components/Header';
 import Body from './components/Body.js';
 import Footer from './components/Footer';
-
-
-
+import About from './components/About.js';
+import Contact from './components/Help.js';
+import { Outlet } from 'react-router-dom';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
         </a>
       </header> */}
       <Header/>
-      <Body/>
+      <Outlet/>
       <Footer/>
     </div>
   );

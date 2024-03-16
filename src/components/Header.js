@@ -1,32 +1,36 @@
+import { Link } from "react-router-dom";
+
+
+
 const Header = () => {
-    return(
-        <nav className="navbar navbar-expand-sm bg-dark navbar-dark text-white">
-  <div className="container-fluid">
-    <a className="navbar-brand" href="#">Food Panda</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul className="navbar-nav text-white">
-        <li className="nav-item">
-          <a className="nav-link" href="#">Offers</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Help</a>
-        </li>
-        <li className="nav-item">
-          <a class="nav-link" href="#">Sign In</a>
-        </li>  
-        <li className="nav-item">
-          <a className="nav-link" href="#">Cart</a>
-        </li>  
-      </ul>
-    </div>
-  </div>
-</nav>
-    
-    
-    
-    );
+  return (
+    <nav className=" navigation-bar navbar navbar-expand-sm bg-black navbar-dark text-white">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi0H0TAgOMY1hymDf7NPEPU7LcgutcRAf1xA&usqp=CAU"></img>Food Paradise</a>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul className="navbar-nav text-white">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">Home</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">About</Link>
+            </li>
+            <li className="nav-item">
+              <Link class="nav-link" to="/support">Help</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/cart">Cart</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+  );
 }
 export default Header;

@@ -1,23 +1,2 @@
-const data=[
-    {
-        name:"Mcdonald's",
-        imgUrl:"https://b.zmtcdn.com/data/pictures/1/35081/fed0dbad0071f721901e60b90bf7ebac.jpg",
-        rating:4.5,
-        deliveryTime:20,
-        cuisins:"Burger, Fries, Coke",
-        location:"Thane"
-    },
-    {
-        name:"Mcdonald's",
-        imgUrl:"https://b.zmtcdn.com/data/pictures/1/35081/fed0dbad0071f721901e60b90bf7ebac.jpg",
-        rating:4.5,
-        deliveryTime:20,
-        cuisins:"Burger, Fries, Coke",
-        location:"Thane"
-    }
-
-
-
-
-]
-export default data;
+export const IMG_URL="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/";
+export const RES_URL="https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.07480&lng=72.88560&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";

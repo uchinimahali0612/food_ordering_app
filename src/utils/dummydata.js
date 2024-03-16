@@ -1,6 +1,4 @@
 const masterData=[
- 
-
 {
     "statusCode": 0,
     "data": {
@@ -1086,12 +1084,7 @@ const masterData=[
                           "Beverages",
                           "Chaat",
                           "Desserts",
-                          "Home Food",
-                          "Italian",
-                          "Maharashtrian",
-                          "Snacks",
-                          "Street Food",
-                          "Sweets"
+                          "Home Food"
                         ],
                         "avgRating": 4.4,
                         "parentId": "281782",
@@ -7421,3 +7414,4 @@ const masterData=[
     "csrfToken": "2ayX5QTDaJ0F-bVvzL8NYuwvPgvOKBmin6LyFZdU"
   }
 ]
+export default masterData;
