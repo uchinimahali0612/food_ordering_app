@@ -1,11 +1,11 @@
-import Carousel from './Carousel';
+import Carousal from './Carousal';
 import Search from './Search.js';
 import Filter from './Filter.js';
 import Cardcontainer from './Cardcontainer.js';
 const Body = () => {
     return (
             <>
-                <Carousel/>
+                <Carousal/>
                 <Search />
                 <Filter />
                 <Cardcontainer />

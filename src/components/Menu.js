@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Shimmereffect from './Shimmereffect';
@@ -29,7 +29,7 @@ const Menu = () => {
     useEffect(() => {
         getMenu();
     }, []);
-
+    
     if (!menuList || menuList.length === 0) {
         return (
             <div className='container mt-5'>

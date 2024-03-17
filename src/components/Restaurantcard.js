@@ -8,7 +8,7 @@ const Restaurantcard = ({
  
         <Link to={`/menu/${id}`} className="custom-card" style={{ color: 'black' }}>
             <div className="part-img">
-                    <img src={IMG_URL+cloudinaryImageId} />
+                    <img src={IMG_URL+cloudinaryImageId}/>
             </div>
              <div className="part-description mt-4 ">
                 <h6><b>{name}</b></h6>

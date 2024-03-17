@@ -1,4 +1,4 @@
-const Carousel=({img})=>{
+const Carousal=({img})=>{
     return(
         <div className=" container">
             <img src={img}
@@ -9,4 +9,4 @@ const Carousel=({img})=>{
         </div>
     )
 }
-export default Carousel;
+export default Carousal;

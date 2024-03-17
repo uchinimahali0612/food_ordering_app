@@ -1,6 +1,6 @@
 // ALL THE IMPORTS
 import Restaurantcard from './Restaurantcard.js';
-import Carousel from './Carousel.js';
+import Carousal from './Carousal.js';
 import Title from './Title.js';
 import { useState, useEffect } from 'react';
 import { IMG_URL } from '../utils/config.js';
@@ -99,7 +99,7 @@ const Cardcontainer = () => {
                               errorMessage ?
                                     <div>{errorSearch}</div> :
                                     <input type="text" value={searchText} placeholder="Search for delicious food" className="search-input" onChange={handleSearchText} />}
-                        <button className='btn-search' onClick={handleSearchClick}><img src="https://www.pngitem.com/pimgs/b/280-2800687_search-icon-transparent-gif-hd-png-download.png" ></img></button>
+                        <button className='btn-search' onClick={handleSearchClick}><img src="https://www.pngitem.com/pimgs/b/280-2800687_search-icon-transparent-gif-hd-png-download.png"></img></button>
                   </div>
 
                   <div className="container pt-4">
@@ -109,7 +109,7 @@ const Cardcontainer = () => {
                               {
                                     carousel.map((imgData) => {
                                           return (
-                                                <Carousel img={IMG_URL + imgData?.imageId}
+                                                <Carousal img={IMG_URL + imgData?.imageId}
                                                 />
                                           )
                                     })

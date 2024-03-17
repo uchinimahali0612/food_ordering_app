@@ -298,9 +298,13 @@ font-weight: 600;
   justify-content: space-around;
   width: 94%;
 }
-
-
-
+.full-about{
+  margin-bottom: 250px;
+  font-family: cursive;
+}
+.home-about, .contact-about{
+  margin-top: 20px;
+}
 
 
 /*RESPONSIVE PART  */
